@@ -1,7 +1,5 @@
--- by. 러커 Rucker
 
 
--- name army gui
 local ScreenGui = Instance.new("ScreenGui")
 local m = Instance.new("Frame")
 local m2 = Instance.new("Frame")
@@ -10,6 +8,8 @@ local Dex = Instance.new("TextButton")
 local name = Instance.new("TextLabel")
 local SHadmin = Instance.new("TextButton")
 local credit = Instance.new("TextButton")
+local MTGui = Instance.new("TextButton")
+local TGui = Instance.new("TextButton")
 
 --Properties:
 
@@ -29,14 +29,14 @@ m2.Parent = m
 m2.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
 m2.Position = UDim2.new(0.0700000003, 0, 0.0475113131, 0)
 m2.Size = UDim2.new(0, 258, 0, 401)
-m2.Active= true
+m2.Active = true
 m2.Draggable = true
 
 cb.Name = "cb"
 cb.Parent = m2
 cb.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
-cb.Position = UDim2.new(0.112403102, 0, 0.668329179, 0)
-cb.Size = UDim2.new(0, 200, 0, 86)
+cb.Position = UDim2.new(0.186046511, 0, 0.551122189, 0)
+cb.Size = UDim2.new(0, 162, 0, 60)
 cb.Font = Enum.Font.SourceSans
 cb.Text = "Cuna Hub"
 cb.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -48,8 +48,8 @@ end)
 Dex.Name = "Dex"
 Dex.Parent = m2
 Dex.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
-Dex.Position = UDim2.new(0.112403102, 0, 0.508728206, 0)
-Dex.Size = UDim2.new(0, 200, 0, 39)
+Dex.Position = UDim2.new(0.0271317847, 0, 0.421446413, 0)
+Dex.Size = UDim2.new(0, 99, 0, 39)
 Dex.Font = Enum.Font.SourceSans
 Dex.Text = "Dex"
 Dex.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -64,15 +64,15 @@ name.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
 name.Position = UDim2.new(0.112403102, 0, 0.0399002507, 0)
 name.Size = UDim2.new(0, 200, 0, 50)
 name.Font = Enum.Font.SciFi
-name.Text = "Army Hub"
+name.Text = "Army Gui"
 name.TextColor3 = Color3.fromRGB(255, 247, 5)
 name.TextSize = 40.000
 
 SHadmin.Name = "SH admin"
 SHadmin.Parent = m2
 SHadmin.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
-SHadmin.Position = UDim2.new(0.112403102, 0, 0.239401489, 0)
-SHadmin.Size = UDim2.new(0, 200, 0, 86)
+SHadmin.Position = UDim2.new(0.186046511, 0, 0.192019939, 0)
+SHadmin.Size = UDim2.new(0, 161, 0, 86)
 SHadmin.Font = Enum.Font.SourceSans
 SHadmin.Text = "SH admin"
 SHadmin.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -156,9 +156,193 @@ end)
 credit.Name = "credit"
 credit.Parent = m2
 credit.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
-credit.Position = UDim2.new(0.232558146, 0, 0.910224438, 0)
+credit.Position = UDim2.new(0.228682175, 0, 0.73815459, 0)
 credit.Size = UDim2.new(0, 138, 0, 26)
 credit.Font = Enum.Font.SourceSans
 credit.Text = "Credit"
 credit.TextColor3 = Color3.fromRGB(0, 0, 0)
 credit.TextSize = 40.000
+
+MTGui.Name = "MTGui"
+MTGui.Parent = m2
+MTGui.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+MTGui.Position = UDim2.new(0.108527139, 0, 0.845386565, 0)
+MTGui.Size = UDim2.new(0, 200, 0, 50)
+MTGui.Font = Enum.Font.SourceSans
+MTGui.Text = "Terror set"
+MTGui.TextColor3 = Color3.fromRGB(0, 0, 0)
+MTGui.TextSize = 30.000
+MTGui.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(('https://pastebin.com/raw/MjBzRjmT'),true))()
+	wait(1);
+
+	-- Made by JackMcJagger15
+
+	power = 500 -- change this to make it more or less powerful
+
+	game:GetService('RunService').Stepped:connect(function()
+		game.Players.LocalPlayer.Character.Head.CanCollide = false
+		game.Players.LocalPlayer.Character.Torso.CanCollide = false
+		game.Players.LocalPlayer.Character["Left Leg"].CanCollide = false
+		game.Players.LocalPlayer.Character["Right Leg"].CanCollide = false
+	end)
+
+	wait(.1)
+	local bambam = Instance.new("BodyThrust")
+	bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+	bambam.Force = Vector3.new(power,0,power)
+	bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+
+	loadstring(game:HttpGet("https://pastebin.com/raw/stggPUBM", true))()
+end)
+
+TGui.Name = "TGui"
+TGui.Parent = m2
+TGui.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+TGui.Position = UDim2.new(0.554263592, 0, 0.421446413, 0)
+TGui.Size = UDim2.new(0, 99, 0, 39)
+TGui.Font = Enum.Font.SourceSans
+TGui.Text = "Terror gui"
+TGui.TextColor3 = Color3.fromRGB(0, 0, 0)
+TGui.TextSize = 17.000
+TGui.MouseButton1Down:connect(function()
+	-- Version: 1.0
+	-- Script Created by Lonestroma
+	-- Instances:
+
+
+	local ScreenGui = Instance.new("ScreenGui")
+	local Frame = Instance.new("Frame")
+	local Text = Instance.new("TextLabel")
+	local ObGuns = Instance.new("TextButton")
+	local BT = Instance.new("TextButton")
+	local CR = Instance.new("TextButton")
+	local SP = Instance.new("TextButton")
+	local ChatEnabled = true
+	local BubblesEnabled = true
+
+	--Properties:
+	ScreenGui.Parent = game.CoreGui
+
+	Frame.Parent = ScreenGui
+	Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Frame.BorderSizePixel = 4
+	Frame.Position = UDim2.new(0.845000006, 0, 0.0100006, 0)
+	Frame.Size = UDim2.new(0, 200, 0, 250)
+	Frame.BorderMode = "Inset"
+
+	Text.Name = "Text"
+	Text.Parent = ScreenGui
+	Text.BackgroundColor3 = Color3.fromRGB(170, 255, 255)
+	Text.Position = UDim2.new(0.853000006, 0, 0.01, 8)
+	Text.Size = UDim2.new(0, 175, 0, 40)
+	Text.Font = Enum.Font.Bangers
+	Text.Text = "맹호부대 1.0"
+	Text.TextColor3 = Color3.fromRGB(0, 0, 0)
+	Text.TextSize = 20.000
+
+	ObGuns.Name = "ObGuns"
+	ObGuns.Parent = ScreenGui
+	ObGuns.AnchorPoint = Vector2.new(0.5, 0.5)
+	ObGuns.BackgroundColor3 = Color3.fromRGB(255, 170, 0)
+	ObGuns.BorderColor3 = Color3.fromRGB(27, 42, 53)
+	ObGuns.BorderSizePixel = 2
+	ObGuns.Position = UDim2.new(0.87, 0, 0.1, 0)
+	ObGuns.Size = UDim2.new(0, 74, 0, 66)
+	ObGuns.Font = Enum.Font.SourceSans
+	ObGuns.Text = "Guns"
+	ObGuns.TextColor3 = Color3.fromRGB(0, 0, 0)
+	ObGuns.TextSize = 35.000
+
+	BT.Name = "BT"
+	BT.Parent = ScreenGui
+	BT.AnchorPoint = Vector2.new(0.5, 0.5)
+	BT.BackgroundColor3 = Color3.fromRGB(255, 170, 0)
+	BT.BorderColor3 = Color3.fromRGB(27, 42, 53)
+	BT.BorderSizePixel = 2
+	BT.Position = UDim2.new(0.923, 0, 0.1, 0)
+	BT.Size = UDim2.new(0, 74, 0, 66)
+	BT.Font = Enum.Font.SourceSans
+	BT.Text = "망치"
+	BT.TextColor3 = Color3.fromRGB(0, 0, 0)
+	BT.TextSize = 35.000
+
+	CR.Name = "CR"
+	CR.Parent = ScreenGui
+	CR.AnchorPoint = Vector2.new(0.5, 0.5)
+	CR.BackgroundColor3 = Color3.fromRGB(255, 170, 0)
+	CR.BorderColor3 = Color3.fromRGB(27, 42, 53)
+	CR.BorderSizePixel = 2
+	CR.Position = UDim2.new(0.87, 0, 0.2, 0)
+	CR.Size = UDim2.new(0, 74, 0, 66)
+	CR.Font = Enum.Font.SourceSans
+	CR.Text = "순간이동"
+	CR.TextColor3 = Color3.fromRGB(0, 0, 0)
+	CR.TextSize = 30.000
+
+	SP.Name = "SP"
+	SP.Parent = ScreenGui
+	SP.AnchorPoint = Vector2.new(0.5, 0.5)
+	SP.BackgroundColor3 = Color3.fromRGB(255, 170, 0)
+	SP.BorderColor3 = Color3.fromRGB(27, 42, 53)
+	SP.BorderSizePixel = 2
+	SP.Position = UDim2.new(0.923, 0, 0.2, 0)
+	SP.Size = UDim2.new(0, 74, 0, 66)
+	SP.Font = Enum.Font.SourceSans
+	SP.Text = "스피드핵"
+	SP.TextColor3 = Color3.fromRGB(0, 0, 0)
+	SP.TextSize = 30.000
+
+	BT.MouseButton1Down:connect(function()
+		local tool3 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
+		tool3.BinType = "Hammer"
+	end)
+
+	ObGuns.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players:GetPlayers()) do
+			if v.Backpack:FindFirstChild("Sniper") then
+				v.Backpack.Sniper.Parent = game.Players.LocalPlayer.Backpack
+				break
+			elseif v.Character then
+				if v.Character:FindFirstChild("Sniper") then
+					v.Character.Sniper.Parent = game.Players.LocalPlayer.Backpack
+					break
+				end
+			end
+		end
+		for i, v in pairs(game.Players:GetPlayers()) do
+			if v.Backpack:FindFirstChild("M9") then
+				v.Backpack.M9.Parent = game.Players.LocalPlayer.Backpack
+				break
+			elseif v.Character then
+				if v.Character:FindFirstChild("M9") then
+					v.Character.M9.Parent = game.Players.LocalPlayer.Backpack
+					break
+				end
+			end
+		end
+		for i, v in pairs(game.Players:GetPlayers()) do
+			if v.Backpack:FindFirstChild("K2") then
+				v.Backpack.K2.Parent = game.Players.LocalPlayer.Backpack
+				break
+			elseif v.Character then
+				if v.Character:FindFirstChild("K2") then
+					v.Character.K2.Parent = game.Players.LocalPlayer.Backpack
+					break
+				end
+			end
+		end
+	end)
+	CR.MouseButton1Down:connect(function()
+		local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+		local location = CFrame.new(2,68,233)
+		local humanoid = game.Players.LocalPlayer.Character.Humanoid
+		humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+		wait(0.1)
+		pl.CFrame = location
+	end)
+	SP.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+	end)
+end)
