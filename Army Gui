@@ -1,0 +1,164 @@
+-- by. 러커 Rucker
+
+
+-- name army gui
+local ScreenGui = Instance.new("ScreenGui")
+local m = Instance.new("Frame")
+local m2 = Instance.new("Frame")
+local cb = Instance.new("TextButton")
+local Dex = Instance.new("TextButton")
+local name = Instance.new("TextLabel")
+local SHadmin = Instance.new("TextButton")
+local credit = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+m.Name = "m"
+m.Parent = ScreenGui
+m.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+m.Position = UDim2.new(0.40715605, 0, 0.210457519, 0)
+m.Size = UDim2.new(0, 300, 0, 442)
+m.Active = true
+m.Draggable = true
+
+m2.Name = "m2"
+m2.Parent = m
+m2.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+m2.Position = UDim2.new(0.0700000003, 0, 0.0475113131, 0)
+m2.Size = UDim2.new(0, 258, 0, 401)
+m2.Active= true
+m2.Draggable = true
+
+cb.Name = "cb"
+cb.Parent = m2
+cb.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+cb.Position = UDim2.new(0.112403102, 0, 0.668329179, 0)
+cb.Size = UDim2.new(0, 200, 0, 86)
+cb.Font = Enum.Font.SourceSans
+cb.Text = "Cuna Hub"
+cb.TextColor3 = Color3.fromRGB(0, 0, 0)
+cb.TextSize = 40.000
+cb.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/syuwqpw123/CunaLoadGate/main/CunaLoadV2"))()
+end)
+
+Dex.Name = "Dex"
+Dex.Parent = m2
+Dex.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+Dex.Position = UDim2.new(0.112403102, 0, 0.508728206, 0)
+Dex.Size = UDim2.new(0, 200, 0, 39)
+Dex.Font = Enum.Font.SourceSans
+Dex.Text = "Dex"
+Dex.TextColor3 = Color3.fromRGB(0, 0, 0)
+Dex.TextSize = 40.000
+Dex.MouseButton1Down:connect(function()
+	loadstring(game:GetObjects("rbxassetid://418957341")[1].Source)()
+end)
+
+name.Name = "name"
+name.Parent = m2
+name.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+name.Position = UDim2.new(0.112403102, 0, 0.0399002507, 0)
+name.Size = UDim2.new(0, 200, 0, 50)
+name.Font = Enum.Font.SciFi
+name.Text = "Army Hub"
+name.TextColor3 = Color3.fromRGB(255, 247, 5)
+name.TextSize = 40.000
+
+SHadmin.Name = "SH admin"
+SHadmin.Parent = m2
+SHadmin.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+SHadmin.Position = UDim2.new(0.112403102, 0, 0.239401489, 0)
+SHadmin.Size = UDim2.new(0, 200, 0, 86)
+SHadmin.Font = Enum.Font.SourceSans
+SHadmin.Text = "SH admin"
+SHadmin.TextColor3 = Color3.fromRGB(0, 0, 0)
+SHadmin.TextSize = 40.000
+SHadmin.MouseButton1Down:connect(function()
+	local AnnGUI = Instance.new("Frame")
+	local background = Instance.new("Frame")
+	local TextBox = Instance.new("TextLabel")
+	local shadow = Instance.new("Frame")
+	local PopupText = Instance.new("TextLabel")
+	local Exit = Instance.new("ImageButton")
+
+	screenGui = Instance.new("ScreenGui",game.CoreGui)
+
+	AnnGUI.Name = 'Boomer'
+	AnnGUI.Parent = screenGui
+	AnnGUI.Active = true
+	AnnGUI.BackgroundTransparency = 1
+	AnnGUI.Position = UDim2.new(0.5, -180, 0, -400)
+	AnnGUI.Size = UDim2.new(0, 360, 0, 20)
+	AnnGUI.ZIndex = 4
+
+	background.Name = "background"
+	background.Parent = AnnGUI
+	background.BackgroundColor3 = Color3.fromRGB(36, 36, 37)
+	background.BorderSizePixel = 0
+	background.Position = UDim2.new(0, 0, 0, 20)
+	background.Size = UDim2.new(0, 360, 0, 135)
+
+	TextBox.Parent = background
+	TextBox.BackgroundTransparency = 1
+	TextBox.Position = UDim2.new(0.017, 0, 0.06, 0)
+	TextBox.Size = UDim2.new(0, 348, 0, 120)
+	TextBox.Font = Enum.Font.SourceSans
+	TextBox.TextSize = 18
+	TextBox.TextWrapped = true
+	TextBox.Text = 'Welcome to SH admin'
+	TextBox.TextColor3 = Color3.new(1, 1, 1)
+	TextBox.TextXAlignment = Enum.TextXAlignment.Left
+	TextBox.TextYAlignment = Enum.TextYAlignment.Top
+
+	shadow.Name = "shadow"
+	shadow.Parent = AnnGUI
+	shadow.BackgroundColor3 = Color3.fromRGB(46, 46, 47)
+	shadow.BorderSizePixel = 0
+	shadow.Size = UDim2.new(0, 360, 0, 20)
+	shadow.ZIndex = 4
+
+	PopupText.Name = "PopupText"
+	PopupText.Parent = shadow
+	PopupText.BackgroundTransparency = 1
+	PopupText.Position = UDim2.new(0, 51, 0, 0)
+	PopupText.Size = UDim2.new(0.76, -16, 0.95, 0)
+	PopupText.ZIndex = 4
+	PopupText.Font = Enum.Font.SourceSans
+	PopupText.TextSize = 14
+	PopupText.Text = "Welcome"
+	PopupText.TextColor3 = Color3.new(1, 1, 1)
+	PopupText.TextWrapped = true
+
+	Exit.Name = "Exit"
+	Exit.Parent = shadow
+	Exit.BackgroundTransparency = 1
+	Exit.Size = UDim2.new(0, 20, 0, 20)
+	Exit.ZIndex = 4
+	Exit.Image = "rbxassetid://2132544126"
+
+	wait(1)
+	AnnGUI:TweenPosition(UDim2.new(0.5, -180, 0, 150), "InOut", "Quart", 0.5, true, nil)
+
+	Exit.MouseButton1Click:Connect(function()
+		AnnGUI:TweenPosition(UDim2.new(0.5, -180, 0, -400), "InOut", "Quart", 0.5, true, nil)
+		wait(0.6)
+		AnnGUI:Destroy()
+	end)
+
+	wait(5)
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/kakaoman/name/main/Sh%20admin'),true))()
+end)
+
+credit.Name = "credit"
+credit.Parent = m2
+credit.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+credit.Position = UDim2.new(0.232558146, 0, 0.910224438, 0)
+credit.Size = UDim2.new(0, 138, 0, 26)
+credit.Font = Enum.Font.SourceSans
+credit.Text = "Credit"
+credit.TextColor3 = Color3.fromRGB(0, 0, 0)
+credit.TextSize = 40.000
